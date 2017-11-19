@@ -1,0 +1,86 @@
+<!DOCtype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pastel-lator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>Pastel-lator</h1>
+ 
+    <form name="Calc">
+
+      <table id="shell" class="grad" >
+        <tr>
+        <td>
+
+          <div id="screen">
+            <input id = "innerscreen" type="text"  readonly size="18" name="input" size="16">
+          </div>
+
+        <tr>
+        <td class="keys">
+
+          <input  class="button pink" type="button" name="modulo"  value="MOD %"  OnClick="Calc.input.value += ' % '">
+
+          <input class="button pink" type="button" name="avg"  value="AVG" OnClick="findAvg(Calc.input.value)">
+
+          <input class="button gray" type="button" name="clear"  value="AC" OnClick="Calc.input.value = ' '">
+       
+          <br>
+
+          <input  class="button black" type="button" name="nine"   value="9" OnClick="Calc.input.value += '9'"> 
+
+          <input   class="button black" type="button" name="eight"   value="8" OnCLick="Calc.input.value += '8'">
+
+          <input  class="button black" type="button" name="seven"   value="7" OnCLick="Calc.input.value += '7'">
+
+          <input class="button pink" id="bold" type="button" name="plus"  value="+" OnClick="Calc.input.value += ' + '">
+          
+         <br>
+
+          <input  class="button black" type="button" name="six"   value="6" OnClick="Calc.input.value += '6'"> 
+
+          <input  class="button black" type="button" name="five"   value="5" OnCLick="Calc.input.value += '5'">
+
+          <input   class="button black" type="button" name="four"   value="4" OnCLick="Calc.input.value += '4'">
+
+          <input class="button pink" type="button" name="minus"  id="bold" value="-" OnClick="Calc.input.value += ' - '">
+           
+         <br>
+
+        <input   class="button black" type="button" name="three"   value="3" OnCLick="Calc.input.value += '3'">
+
+        <input  class="button black" type="button" name="two"   value="2" OnCLick="Calc.input.value += '2'">
+
+        <input  class="button black" type="button" name="one"   value="1" OnClick="Calc.input.value += '1'"> 
+
+        <input class="button pink" type="button" name="multiply"  id="bold" value="  *  " OnClick="Calc.input.value += ' * '">
+
+        <br>
+
+        <input  class="button black" type="button" name="one"   value="0" OnClick="Calc.input.value += '0'"> 
+
+        <input  class="button gray" id="bold" type="button" name="result" id="bold" value="=" OnClick="Calc.input.value = eval(Calc.input.value)">  
+
+        <input class="button pink" type="button" name="division" id="bold" value="  /  " OnClick="Calc.input.value += ' / '">
+                
+        
+
+        </td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+     function findAvg(val){
+          Calc.input.value = eval(Calc.input.value) / val.split('+').length
+     }
+    </script>
+       
+  </body>
+</html>
